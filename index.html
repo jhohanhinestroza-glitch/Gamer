@@ -141,7 +141,19 @@
       <h2>🎁 Sorteo de la semana</h2>
       <p>Participa y gana una Gift Card para FC Mobile.</p>
       <a href="https://forms.gle/" target="_blank">
-        <button>Participar Ahora</button>
+        <button>Participar Ahora</button><!-- Modal del sorteo -->
+<div id="modalSorteo" class="modal">
+  <div id="contenidoModal" class="modal-content">
+    <span class="close">&times;</span>
+    <h2>¡Sorteo de la Semana!</h2>
+    <p>El sorteo termina en:</p>
+    <div id="contador">00:00:00</div>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSejemplo/viewform?embedded=true" allowfullscreen></iframe>
+  </div>
+</div>
+
+<!-- Botón flotante -->
+<button id="participarBtnFlotante" class="boton boton-flotante">Participar ahora</button>
       </a>
       <p><small>(Enlace de Google Forms para registrar a tus seguidores)</small></p>
     </div>
