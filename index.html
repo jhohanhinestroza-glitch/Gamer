@@ -201,7 +201,44 @@
     }
   </style>
 </head>
-<body>
+<script>
+const modal = document.getElementById("modalSorteo");
+const btnFlotante = document.getElementById("participarBtnFlotante");
+const span = document.getElementsByClassName("close")[0];
+const contador = document.getElementById("contador");
+
+// Abrir modal
+btnFlotante.onclick = () => modal.style.display = "block";
+
+// Cerrar modal
+span.onclick = () => modal.style.display = "none";
+window.onclick = e => { if(e.target==modal) modal.style.display="none"; }
+
+// Contador regresivo
+let tiempoRestante = 86400; // 1 día
+function actualizarContador(){
+  let h=Math.floor(tiempoRestante/3600);
+  let m=Math.floor((tiempoRestante%3600)/60);
+  let s=tiempoRestante%60;
+  contador.textContent=(h<10?"0"+h:h)+":"+(m<10?"0"+m:m)+":"+(s<10?"0"+s:s);
+
+  if(tiempoRestante<=3600){
+    contador.style.color="#ff0000";
+    btnFlotante.classList.add("parpadea");
+  } else if(tiempoRestante<=21600){
+    contador.style.color="#ff6600";
+  }
+
+  if(tiempoRestante<=0){
+    clearInterval(intervalo);
+    contador.textContent="¡Sorteo finalizado!";
+    btnFlotante.classList.remove("parpadea");
+  }
+  tiempoRestante--;
+}
+const intervalo=setInterval(actualizarContador,1000);
+actualizarContador();
+</script><body>
   <header>
     <h1>🎮 JSH Gamer 🎮</h1>
     <p>Apóyame y recibe premios en EA SPORTS FC Mobile</p>
