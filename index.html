@@ -1,268 +1,215 @@
-
-<head>
-  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
-  <link rel="stylesheet" href="styles/style.css"/>
-  <title>Hello, World!</title>
-</head>
-<body>
-  <style>
-/* Contenedor de la sección */
-.guia-fc {
-    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-    color: #fff;
-    padding: 20px;
-    border-radius: 15px;
-    max-width: 700px;
-    font-family: 'Arial', sans-serif;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
-    margin: 20px auto;
-}
-
-/* Título */
-.guia-fc h2 {
-    text-align: center;
-    font-size: 28px;
-    margin-bottom: 15px;
-    color: #00ff99;
-    text-shadow: 1px 1px 5px #000;
-}
-
-/* Lista de enlaces */
-.guia-fc ul {
-    list-style: none;
-    padding: 0;
-}
-
-.guia-fc li {
-    background: rgba(0,255,153,0.1);
-    margin: 10px 0;
-    padding: 12px 15px;
-    border-radius: 10px;
-    transition: 0.3s;
-}
-
-.guia-fc li:hover {
-    background: rgba(0,255,153,0.3);
-}
-
-.guia-fc a {
-    color: #00ff99;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.guia-fc a:hover {
-    text-decoration: underline;
-}
-</style>
-
-<div class="guia-fc">
-    <h2>Guías y Trucos de EA SPORTS FC Mobile 25</h2>
-    <ul>
-        <li><a href="https://www.ea.com/es/games/ea-sports-fc/fc-mobile/features/guide" target="_blank" rel="noopener noreferrer">Guías oficiales de EA Sports FC Mobile</a> – Tutoriales, consejos y estrategias para principiantes y avanzados.</li>
-        <li><a href="https://www.redbull.com/int-en/ea-sports-fc-25-pro-tips" target="_blank" rel="noopener noreferrer">Consejos de jugadores profesionales</a> – Estrategias y recomendaciones para mejorar tu juego.</li>
-        <li><a href="https://www.vandal.elespanol.com/guias/guia-ea-sports-fc-24-trucos-consejos-y-secretos" target="_blank" rel="noopener noreferrer">Guías de trucos y secretos</a> – Estrategias generales y consejos avanzados (contenido seguro de un sitio de referencia).</li>
-        <li><a href="https://www.youtube.com/results?search_query=EA+Sports+FC+Mobile+25+trucos" target="_blank" rel="noopener noreferrer">Videos de trucos y tutoriales</a> – Canales de YouTube confiables para aprender técnicas y estrategias.</li>
-    </ul>
-</div>
-  <h1>
-    Hello, World!
-  </h1>
-</body>
-</html>
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FC Mobile Regalos 🎮</title>
+  <title>JSH Gamer - FC Mobile</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #0c192c;
-      color: white;
-      text-align: center;
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{
+      font-family:'Arial',sans-serif;
+      background: radial-gradient(circle at top,#0f0f0f,#1a1a1a);
+      color:#fff;
+      text-align:center;
+      overflow-x:hidden;
+      position:relative;
     }
-    header {
-      background: #132d46;
-      padding: 20px;
+    /* Partículas */
+    .particle{
+      position:absolute;
+      background:linear-gradient(45deg,#ff00ff,#00ffff);
+      border-radius:50%;
+      animation:moveParticle 10s linear infinite;
+      opacity:0.7;
     }
-    header h1 {
-      margin: 0;
+    @keyframes moveParticle{
+      0%{transform:translateY(0) translateX(0);}
+      100%{transform:translateY(-150vh) translateX(50vw);opacity:0;}
     }
-    .container {
-      max-width: 800px;
-      margin: auto;
-      padding: 20px;
+    /* Header */
+    header{
+      padding:40px 20px;
+      background:linear-gradient(90deg,#ff00ff,#00ffff);
+      border-radius:20px;
+      margin-bottom:30px;
+      animation:glowHeader 3s infinite alternate;
     }
-    .card {
-      background: #1f3b5c;
-      padding: 20px;
-      margin: 15px 0;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    @keyframes glowHeader{
+      0%{box-shadow:0 0 20px #ff00ff,0 0 20px #00ffff;}
+      100%{box-shadow:0 0 50px #ff00ff,0 0 50px #00ffff;}
     }
-    button {
-      background: #00ff88;
-      border: none;
-      padding: 10px 20px;
-      margin-top: 10px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: 0.3s;
+    header h1{font-size:3rem;text-shadow:2px 2px 10px #000;}
+    header p{font-size:1.3rem;margin-top:10px;text-shadow:1px 1px 5px #000;}
+    /* Barra premios */
+    .premios{
+      background:#111;
+      border:2px solid #ff00ff;
+      border-radius:15px;
+      padding:15px;
+      margin:20px auto;
+      max-width:90%;
+      animation:pulse 2s infinite;
     }
-    button:hover {
-      background: #00cc66;
+    @keyframes pulse{50%{transform:scale(1.05);}}
+    /* Botones */
+    .btn{
+      display:inline-block;
+      margin:15px;
+      padding:15px 30px;
+      font-size:1.2rem;
+      color:white;
+      text-decoration:none;
+      border-radius:15px;
+      background:linear-gradient(45deg,#ff0055,#ff33aa);
+      animation:colorShift 5s infinite;
+      transition:0.3s;
     }
-    footer {
-      background: #132d46;
-      padding: 15px;
-      margin-top: 20px;
-      font-size: 14px;
+    .btn:hover{transform:scale(1.1);}
+    @keyframes colorShift{
+      0%{background:linear-gradient(45deg,#ff0055,#ff33aa);}
+      50%{background:linear-gradient(45deg,#00ffff,#ff00ff);}
+      100%{background:linear-gradient(45deg,#ff0055,#ff33aa);}
     }
-    a {
-      text-decoration: none;
+    /* Botón flotante */
+    .btn-flotante{
+      position:fixed;
+      bottom:20px;right:20px;
+      background:linear-gradient(45deg,#00ffff,#ff00ff);
+      padding:15px 25px;
+      border-radius:20px;
+      font-size:1.2rem;
+      animation:parpadeo 2s infinite;
+      color:#fff;
+      text-decoration:none;
+    }
+    @keyframes parpadeo{
+      0%,100%{transform:scale(1);}
+      50%{transform:scale(1.1);}
+    }
+    /* Ganar dinero */
+    .ganar-dinero,.trucos,.noticias,.ranking{
+      background:#111;
+      border-radius:15px;
+      padding:20px;
+      margin:30px auto;
+      max-width:90%;
+      text-align:center;
+    }
+    .ganar-dinero h3,.trucos h3,.noticias h3,.ranking h3{margin-bottom:15px;}
+    .ganar-dinero a,.trucos a{
+      display:block;
+      margin:10px auto;
+      padding:12px 20px;
+      border-radius:12px;
+      text-decoration:none;
+      color:#fff;
+      background:linear-gradient(45deg,#ff00ff,#00ffff);
+      transition:0.3s;
+    }
+    .ganar-dinero a:hover,.trucos a:hover{transform:scale(1.1);}
+    /* Galería */
+    .galeria{
+      display:flex;flex-wrap:wrap;gap:15px;justify-content:center;
+      margin:30px auto;max-width:90%;
+    }
+    .galeria img{
+      width:150px;height:150px;object-fit:cover;
+      border-radius:12px;border:2px solid #ff33aa;
+      transition:0.3s;
+    }
+    .galeria img:hover{transform:scale(1.1);}
+    /* Footer */
+    footer{
+      background:#111;padding:20px;margin-top:40px;border-top:2px solid #ff00ff;
+    }
+    footer a{color:#00ffff;margin:0 10px;text-decoration:none;}
+    @media(max-width:500px){
+      header h1{font-size:2rem;}
+      header p{font-size:1rem;}
+      .galeria img{width:100px;height:100px;}
     }
   </style>
-<
+</head>
+<body>
 
-    <
-</body>
-</html><!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JSH Gamer</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background: #0f0f0f;
-      color: #fff;
-    }
-    header {
-      padding: 20px;
-      background: linear-gradient(90deg, #ff00ff, #00ffff);
-      border-radius: 10px;
-      margin-bottom: 20px;
-    }
-    h1 {
-      font-size: 2.5rem;
-      margin: 0;
-    }
-    p {
-      margin-top: 10px;
-    }
-    .btn {
-      display: inline-block;
-      margin: 15px;
-      padding: 15px 25px;
-      font-size: 1.2rem;
-      color: white;
-      background: #ff0055;
-      text-decoration: none;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      transition: 0.3s;
-    }
-    .btn:hover {
-      background: #ff3366;
-      transform: scale(1.05);
-    
-    <h1>🎮 JSH Gamer 🎮</h1>
-    <p>Apóyame y recibe premios en EA SPORTS FC Mobile</p>
-  </header>
+<header>
+  <h1>🎮 JSH Gamer 🎮</h1>
+  <p>Apóyame y recibe premios en EA SPORTS FC Mobile</p>
+</header>
 
-  <main>
-    <h2>💰 Opciones para donar</h2>
-
-    <!-- Botón PayPal -->
-    <a href="https://www.paypal.me/JHOHANHINESTROZA" target="_blank" class="btn">
-      💳 Donar con PayPal
-    </a>
-
-    <!-- Botón Nequi -->
-    <a href="https://wa.me/573019284852" target="_blank" class="btn">
-      📲 Donar con Nequi
-    </a>
-  </main>
-</body>
-</html>
-    
-
-   
-    <!-- Publicidad -->
-    <div class="card">
-      <h2>💰 Anuncios</h2>
-      <p>Aquí aparecerán anuncios (cuando actives Google AdSense).</p>
-      <!-- Ejemplo espacio anuncio -->
-      <div style="background:#fff; color:#000; padding:10px; border-radius:5px;">
-        Espacio reservado para anuncios
-      </div>
-    </div>
-  </div>
-
-  <footer>
-    © 2025 FC Mobile Fans | Hecho con ❤️ para la comunidad
-  </footer>
-</body>
-</html>
-<div class="card">
-  <h2>📥 Descarga de Guías Exclusivas</h2>
-  <p>Descarga guías y trucos para mejorar en EA SPORTS FC Mobile.</p>
-  <div class="actions">
-    <a class="btn" href="https://shrinkme.io/TULINK" target="_blank" rel="noopener">
-      Descargar Guía
-    </a>
-  </div>
-  <p class="info">Este enlace pasa por un acortador (gratis para ti, pero me apoyas con cada clic 🙌).</p>
-</div>
-<div class="card">
-  <h2>🎁 Sorteo Automático</h2>
-  <p>Participa ingresando tu nombre y correo para ganar premios.</p>
-
-  <form id="sorteoForm">
-    <input type="text" id="nombre" placeholder="Tu nombre" required>
-    <input type="email" id="correo" placeholder="Tu correo" required>
-    <button type="submit">Participar</button>
-  </form>
-
-  <h3>Participantes:</h3>
-  <ul id="listaParticipantes"></ul>
-
-  <button onclick="elegirGanador()">🎉 Elegir Ganador</button>
-  <p id="ganador"></p>
-</div>
-
+<!-- Partículas -->
 <script>
-  const form = document.getElementById("sorteoForm");
-  const lista = document.getElementById("listaParticipantes");
-  const ganadorTexto = document.getElementById("ganador");
-  let participantes = [];
-
-  form.addEventListener("submit", function(e) {
-    e.preventDefault();
-    const nombre = document.getElementById("nombre").value;
-    const correo = document.getElementById("correo").value;
-    participantes.push({nombre, correo});
-
-    const li = document.createElement("li");
-    li.textContent = nombre + " (" + correo + ")";
-    lista.appendChild(li);
-
-    form.reset();
-  });
-
-  function elegirGanador() {
-    if (participantes.length === 0) {
-      ganadorTexto.textContent = "No hay participantes aún 😅";
-      return;
-    }
-    const random = Math.floor(Math.random() * participantes.length);
-    const ganador = participantes[random];
-    ganadorTexto.textContent = "🎉 El ganador es: " + ganador.nombre + " (" + ganador.correo + ")";
+  for(let i=0;i<30;i++){
+    let p=document.createElement('div');
+    p.className='particle';
+    p.style.left=Math.random()*100+'vw';
+    p.style.top=Math.random()*100+'vh';
+    p.style.width=p.style.height=(Math.random()*6+4)+'px';
+    document.body.appendChild(p);
   }
 </script>
+
+<!-- Barra premios -->
+<div class="premios">
+  🏆 ¡Sorteo semanal de monedas y jugadores especiales!
+</div>
+
+<!-- Donaciones -->
+<main>
+  <h2>💰 Opciones para apoyar</h2>
+  <a href="https://www.paypal.me/JHOHANHINESTROZA" target="_blank" class="btn">💳 Donar con PayPal</a>
+  <a href="https://wa.me/573019284852" target="_blank" class="btn">📲 Donar con Nequi</a>
+</main>
+
+<!-- Ganar dinero -->
+<div class="ganar-dinero">
+  <h3>💵 Gana dinero en línea</h3>
+  <a href="#">📌 Encuestas pagadas</a>
+  <a href="#">📌 Ver videos y ganar recompensas</a>
+  <a href="#">📌 Afíliate y gana por recomendar</a>
+</div>
+
+<!-- Trucos -->
+<div class="trucos">
+  <h3>⚡ Trucos y guías FC Mobile</h3>
+  <a href="https://www.ea.com/es/games/ea-sports-fc/fc-mobile" target="_blank">🌍 Página oficial EA FC Mobile</a>
+  <a href="#">📘 Tutorial de mejorar tu equipo</a>
+  <a href="#">⚽ Estrategias para ganar partidos</a>
+</div>
+
+<!-- Noticias -->
+<div class="noticias">
+  <h3>📰 Noticias recientes</h3>
+  <p>✅ Nuevo evento de Capitanes disponible.</p>
+  <p>✅ Jugadores 110+ ya en sobres especiales.</p>
+  <p>✅ EA anuncia mejoras en recompensas semanales.</p>
+</div>
+
+<!-- Ranking -->
+<div class="ranking">
+  <h3>🏅 Top jugadores de la semana</h3>
+  <ol>
+    <li>🔥 PlayerOne - 115 OVR</li>
+    <li>⚡ ProGamerX - 113 OVR</li>
+    <li>⭐ JSH Gamer - 111 OVR</li>
+  </ol>
+</div>
+
+<!-- Galería -->
+<div class="galeria">
+  <img src="https://i.ibb.co/Yb3Hbt5/fc-mobile1.jpg" alt="FC Mobile 1">
+  <img src="https://i.ibb.co/9G1sXqV/fc-mobile2.jpg" alt="FC Mobile 2">
+  <img src="https://i.ibb.co/QX5ssGq/fc-mobile3.jpg" alt="FC Mobile 3">
+</div>
+
+<!-- Footer -->
+<footer>
+  <p>© 2025 JSH Gamer | EA SPORTS FC Mobile Fanpage</p>
+  <a href="#">Contacto</a> | <a href="#">Privacidad</a> | <a href="#">Términos</a>
+</footer>
+
+<!-- Botón flotante -->
+<a href="#" class="btn-flotante">🎁 Participar ahora</a>
+
+</body>
+</html>
